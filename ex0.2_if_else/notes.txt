@@ -1,0 +1,4 @@
+Example of if_else
+
+* We can bind data to not only text and attributes, but also the structure of the DOM.
+
