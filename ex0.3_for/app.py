@@ -1,12 +1,16 @@
 from vue import *
 
 class App(VueComponent):
-    seen = False
+    todos = ["Get 4 lbs", "Email party invitations", "Return books to libraray"]
+
     template = """
-        <div>
-            <span v-if="seen">Now you see me</span>
-            <span else="seen">Now you don't</span>
-        </div>
+      <div>
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo}}
+          </li>
+        </ol>
+      </div>
     """
     
 
