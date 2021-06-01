@@ -1,3 +1,1 @@
-# PhyloTraits
-# VuePyTutorial
 # VuePyTutorial
