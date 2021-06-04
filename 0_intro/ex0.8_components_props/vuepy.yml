@@ -1,0 +1,6 @@
+stylesheets:
+  - css/style.css
+  - 
+
+templates:
+   htmltemplate : some_index.html

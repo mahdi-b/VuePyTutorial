@@ -6,6 +6,6 @@ class App(VueComponent):
     message ="Hello World"
     def reverseMessage(self, event):
         print(f"The message was clicked {event}")
-        self.message = " ".join(self.message.split()[::-1])
+        self.message = self.message[::-1]
 
 App("#app")
