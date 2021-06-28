@@ -1,21 +1,22 @@
 from vue import *
 
 class App(VueComponent):
-    seen = False
-    someUrl="/a/b/c"
-    eventName = "click"
-    
+    url = "/a/b/c"
+    key = "href"
+    event="click"
     template = """
     <div>
-        <p v-if="seen">Now you see me</p>
-        <p v-else>or not</p>
-        
-        <p> <a v-bind:href="someUrl"> This should take me to "{{someUrl}}" </a></p>
-       
-        <p><a v-on:click="clicked"> Explicit argument: Click me </a></p>
+         <h2>Biniding</h2>
+         <p><a v-bind:href="url"> Method 1 </a></p>
+         <p><a :href="url"> Method 2 </a></p>
+         <p><a :[key]="url"> Method 3 </a></p>
+
+         <h2>Click</h2>
+         <p><a v-on:click="clicked"> Method 1 </a></p>
+         <p><a @click="clicked"> Method 2 </a></p>
+         <p><a @[event]="clicked"> Method 3 </a></p>
 
 
-         <p><a v-on:[eventName]="clicked"> Dynamic Arguments: click me </a></p>
 
     </div>
     """
